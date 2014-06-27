@@ -1,6 +1,8 @@
 package de.kilobyte22.voc.api.network;
 
-public interface Network {
+import de.kilobyte22.voc.api.Persistable;
+
+public interface Network extends Persistable {
 
     boolean connect(Node node);
 
@@ -19,5 +21,7 @@ public interface Network {
     void sendToVisible(Node source, String name, Object... data);
 
     void registerSniffer(Sniffer sniffer);
+
+    void unregisterSniffer(Sniffer sniffer);
 
 }

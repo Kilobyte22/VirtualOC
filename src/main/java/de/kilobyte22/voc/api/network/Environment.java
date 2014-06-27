@@ -1,6 +1,8 @@
 package de.kilobyte22.voc.api.network;
 
-public interface Environment {
+import de.kilobyte22.voc.api.Persistable;
+
+public interface Environment extends Persistable {
 
     Node getNode();
 
