@@ -5,12 +5,13 @@ import de.kilobyte22.voc.api.network.{Sniffer, Node}
 import java.lang.Iterable
 import scala.collection.mutable
 import scala.collection.convert.WrapAsScala._
+import scala.collection.convert.WrapAsJava._
 
 class Network extends api.Network {
 
   private val sniffers = new mutable.ArrayBuffer[Sniffer]
   private val nodes = new mutable.ArrayBuffer[Node]
-  private val namedNodes = new mutable.Map[String, mutable.ArrayBuffer[Node]] // TODO: FIX COMPILE ERROR
+  private val namedNodes = mutable.Map.empty[String, mutable.ArrayBuffer[Node]] // TODO: FIX COMPILE ERROR
 
   override def registerSniffer(sniffer: Sniffer) {
     sniffers += sniffer
@@ -35,7 +36,9 @@ class Network extends api.Network {
 
   }
 
-  override def sendToAddress(source: Node, target: String, name: String, data: AnyRef*): Unit = ()
+  override def sendToAddress(source: Node, target: String, name: String, data: AnyRef*) {
+
+  }
 
   override def getNodes(reference: Node): Iterable[Node] = null
 
