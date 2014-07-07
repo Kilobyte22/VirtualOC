@@ -1,0 +1,3 @@
+[submodule "binaryformat"]
+	path = binaryformat
+	url = git@github.com:Kilobyte22/BinaryFormat.git
