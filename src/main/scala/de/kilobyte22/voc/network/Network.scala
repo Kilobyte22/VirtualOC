@@ -6,6 +6,7 @@ import java.lang.Iterable
 import scala.collection.mutable
 import scala.collection.convert.WrapAsScala._
 import scala.collection.convert.WrapAsJava._
+import de.kilobyte22.binaryformat.wrapper.HashTag
 
 class Network extends api.Network {
 
@@ -49,4 +50,8 @@ class Network extends api.Network {
   override def disconnect(node: Node): Boolean = false
 
   override def connect(node: Node): Boolean = false
+
+  override def save(tag: HashTag): Unit = ???
+
+  override def load(tag: HashTag): Unit = ???
 }
