@@ -4,9 +4,9 @@ import java.io._
 
 class BidirectionalDataStream(in: DataInputStream, out: DataOutputStream) extends Closeable {
 
-  def getInput: DataInput = in
+  def input: DataInput = in
 
-  def getOutput: DataOutput = out
+  def output: DataOutput = out
 
   def close {
     in.close

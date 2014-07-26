@@ -4,11 +4,11 @@ import de.kilobyte22.voc.api.auth.AuthHandler
 import de.kilobyte22.voc.api.common.encryption.EncryptionLayer
 
 abstract trait Server {
-  def getAuthHandler: AuthHandler
+  def authHandler: AuthHandler
 
-  def getDisplayName: String
+  def displayName: String
 
-  def setDisplayName(name: String)
+  def displayName_=(name: String)
 
-  def getEncryptionLayer: EncryptionLayer
+  def encryptionLayer: EncryptionLayer
 }

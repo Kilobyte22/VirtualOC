@@ -2,8 +2,8 @@ package de.kilobyte22.voc.api.network
 
 import de.kilobyte22.voc.api.Persistable
 
-abstract trait Environment extends Persistable {
-  def getNode: Node
+trait Environment extends Persistable {
+  def node: Node
 
   def onConnect(node: Node)
 

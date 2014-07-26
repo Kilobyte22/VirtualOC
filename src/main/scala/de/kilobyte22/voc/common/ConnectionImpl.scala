@@ -6,6 +6,4 @@ import de.kilobyte22.voc.api.common.encryption.EncryptionLayer
 class ConnectionImpl extends Connection {
 
   var encryptionLayer: EncryptionLayer = null
-
-  override def getEncryptionLayer: EncryptionLayer = encryptionLayer
 }

@@ -10,13 +10,7 @@ class ServerImpl extends Server {
   var authHandler: AuthHandler = null
   var encryptionLayer: EncryptionLayer = null
 
-  override def setDisplayName(name: String) {
+  override def displayName_=(name: String) {
     // todo: send packet
   }
-
-  override def getDisplayName = displayName
-
-  override def getAuthHandler: AuthHandler = authHandler
-
-  override def getEncryptionLayer: EncryptionLayer = encryptionLayer
 }

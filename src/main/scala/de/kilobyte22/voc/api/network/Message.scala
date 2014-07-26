@@ -6,27 +6,27 @@ package de.kilobyte22.voc.api.network
  * We use an extra class to deliver messages to nodes to make the cancel logic
  * more clear (returning a boolean can get annoying very fast).
  */
-abstract trait Message {
+trait Message {
   /**
    * The node that sent the message.
    *
    * @return the source node.
    */
-  def getSource: Node
+  def source: Node
 
   /**
    * The name of this message.
    *
    * @return the name of the message.
    */
-  def getName: String
+  def name: String
 
   /**
    * The values passed along in the message.
    *
    * @return the message data.
    */
-  def getData: Array[AnyRef]
+  def data: Array[AnyRef]
 
   /**
    * Stop further propagation of a broadcast message.

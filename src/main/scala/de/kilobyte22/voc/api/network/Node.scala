@@ -3,17 +3,17 @@ package de.kilobyte22.voc.api.network
 import de.kilobyte22.voc.api.Persistable
 
 abstract trait Node extends Persistable {
-  def getHost: Environment
+  def host: Environment
 
-  def getVisibility: Visibility
+  def visibility: Visibility
 
-  def getAddress: String
+  def address: String
 
-  def getNetwork: String
+  def network: Network
 
   def canBeReachedFrom(node: Node): Boolean
 
-  def getReachableNodes: Iterable[Node]
+  def reachableNodes: Iterable[Node]
 
   def sendToAddress(address: String, name: String, data: AnyRef*)
 
